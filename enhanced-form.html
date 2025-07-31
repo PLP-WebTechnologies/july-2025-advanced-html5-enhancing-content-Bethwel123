@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawa Moto Medical Centre</title>
+    <style>
+        :root {
+            --navy: #003366;       /* Primary color */
+            --coral: #FF7F50;      /* Secondary color */
+            --light-gray: #F5F5F5;  /* Neutral background */
+            --dark-text: #333333;   /* Main text color */
+            --light-text: #FFFFFF;  /* Text on dark backgrounds */
+            --accent: #A5C8E4;     /* Light blue accent */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--light-gray);
+        }
+        
+        header {
+            background-color: var(--navy);
+            color: var(--light-text);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .header-title {
+            color: var(--light-text);
+        }
+        
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: var(--navy);
+        }
+        
+        h2 {
+            border-bottom: 2px solid var(--coral);
+            padding-bottom: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--navy);
+            color: var(--light-text);
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid var(--accent);
+        }
+        
+        video, audio {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid var(--accent);
+        }
+        
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        fieldset {
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        legend {
+            padding: 0 10px;
+            color: var(--navy);
+            font-weight: bold;
+            background-color: var(--light-gray);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--navy);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid var(--coral);
+            border-color: var(--coral);
+        }
+        
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+            accent-color: var(--coral);
+        }
+        
+        button {
+            background-color: var(--navy);
+            color: var(--light-text);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: var(--coral);
+        }
+        
+        button[type="reset"] {
+            background-color: var(--light-gray);
+            color: var(--dark-text);
+            margin-left: 10px;
+        }
+        
+        button[type="reset"]:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-group {
+            flex: 1;
+        }
+        
+        .required:after {
+            content: " *";
+            color: #e74c3c;
+        }
+        
+        .kenya-flag {
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 5px;
+            border: none;
+        }
+        
+        footer {
+            background-color: var(--navy);
+            color: var(--light-text);
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        /* Coral accent elements */
+        .coral-accent {
+            color: var(--coral);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Dawa Moto Medical Centre <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg" alt="Kenya Flag" class="kenya-flag"></h1>
+        <p>Quality healthcare for all communities in Kenya</p>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Located in Jua Kali Street, Bondeni District, Dawa Moto Medical Centre provides comprehensive healthcare services:</p>
+        
+        <div class="media-container">
+            <figure>
+                <img src="./Dawa-Moto-health-Centre.jpg" alt="Our modern medical facility Jua Kali Street, Bondeni District">
+                <figcaption>Our facility in Jua Kali Street, Bondeni District</figcaption>
+            </figure>
+            
+            <video poster="./Dawa-Moto-health-Centre-2.jpg" controls muted>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <audio controls>
+                <source src="#" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <h3>Primary Healthcare Services</h3>
+        <ul>
+            <li>General consultations</li>
+            <li>Maternal and child health</li>
+            <li>HIV testing and counseling</li>
+            <li>Malaria diagnosis and treatment</li>
+            <li>Immunization services</li>
+        </ul>
+        
+        <h3>Specialized Services</h3>
+        <ol>
+            <li>Diabetes screening and management</li>
+            <li>Hypertension clinic</li>
+            <li>Nutritional counseling</li>
+            <li>Minor surgical procedures</li>
+            <li>Laboratory services</li>
+        </ol>
+    </section>
+
+        </section>
+
+    <!-- Operating Hours Section -->
+    <section id="hours">
+        <h2>Clinic Hours</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Opening Hours</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday - Friday</td>
+                    <td>8:00 AM - 5:00 PM</td>
+                    <td>All services available</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>9:00 AM - 2:00 PM</td>
+                    <td>Outpatient services only</td>
+                </tr>
+                <tr>
+                    <td>Sunday/Public Holidays</td>
+                    <td>10:00 AM - 1:00 PM</td>
+                    <td>Emergency services only</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Medical Team Section -->
+    <section id="physicians">
+        <h2>Our Medical Team</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Specialty</th>
+                    <th>Languages Spoken</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dr. Wanjiku Mwangi</td>
+                    <td>Family Medicine</td>
+                    <td>Swahili, English, Kikuyu</td>
+                </tr>
+                <tr>
+                    <td>Dr. Abdi Hassan</td>
+                    <td>Pediatrics</td>
+                    <td>Swahili, English, Somali</td>
+                </tr>
+                <tr>
+                    <td>Dr. Akinyi Odhiambo</td>
+                    <td>Women's Health</td>
+                    <td>Swahili, English, Luo</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Patient Registration Form Section -->
+    <section id="patient-form">
+        <h2>Patient Registration Form</h2>
+        <p>Please complete this form to register at our clinic. Required fields are marked with <span class="required"></span>.</p>
+        
+        <!-- Main Form Element with HTML5 validation -->
+        <form id="medicalForm" novalidate>
+            <!-- Personal Information Fieldset -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <!-- Name Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="required">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required minlength="2" autocomplete="given-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName" class="required">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required minlength="2" autocomplete="family-name">
+                    </div>
+                </div>
+                
+                <!-- DOB and Gender Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob" class="required">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required autocomplete="bday" max="2023-01-01">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender" class="required">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" selected disabled>Select gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Kenyan ID Number -->
+                <div class="form-group">
+                    <label for="idNumber">National ID/Passport Number</label>
+                    <input type="text" id="idNumber" name="idNumber" pattern="[0-9]{8}" placeholder="12345678">
+                    <small>For Kenyans: 8-digit ID number</small>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="example@domain.com">
+                </div>
+                
+                <!-- Phone Numbers (Kenyan format) -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone" class="required">Mobile Number</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" pattern="[0-9]{10}" placeholder="0712345678">
+                        <small>Format: 07xxxxxxxx (10 digits)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="altPhone">Alternative Phone</label>
+                        <input type="tel" id="altPhone" name="altPhone" pattern="[0-9]{10}" placeholder="07xxxxxxxx">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Kenyan Address Information Fieldset -->
+            <fieldset>
+                <legend>Residence Information</legend>
+                
+                <!-- Kenyan County Selection -->
+                <div class="form-group">
+                    <label for="county" class="required">County of Residence</label>
+                    <select id="county" name="county" required>
+                        <option value="" selected disabled>Select county</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="kiambu">Kiambu</option>
+                        <option value="nakuru">Nakuru</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                        <!-- Additional Kenyan counties would be listed -->
+                    </select>
+                </div>
+                
+                <!-- Sub-County and Ward -->
+                <div class="form-group">
+                    <label for="subCounty">Sub-County</label>
+                    <input type="text" id="subCounty" name="subCounty">
+                </div>
+                
+                <div class="form-group">
+                    <label for="ward">Ward</label>
+                    <input type="text" id="ward" name="ward">
+                </div>
+                
+                <!-- Estate/Village -->
+                <div class="form-group">
+                    <label for="estate" class="required">Estate/Village</label>
+                    <input type="text" id="estate" name="estate" required>
+                </div>
+            </fieldset>
+            
+            <!-- Health Insurance Fieldset -->
+            <fieldset>
+                <legend>Health Insurance</legend>
+                
+                <!-- Insurance Yes/No Radio -->
+                <div class="form-group">
+                    <label>Do you have health insurance?</label>
+                    <div>
+                        <input type="radio" id="insuranceYes" name="hasInsurance" value="yes">
+                        <label for="insuranceYes">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="insuranceNo" name="hasInsurance" value="no" checked>
+                        <label for="insuranceNo">No</label>
+                    </div>
+                </div>
+                
+                <!-- Conditional Insurance Details -->
+                <div id="insuranceDetails" style="display:none;">
+                    <div class="form-group">
+                        <label for="insuranceProvider">Insurance Provider</label>
+                        <select id="insuranceProvider" name="insuranceProvider">
+                            <option value="" selected disabled>Select provider</option>
+                            <option value="nhif">NHIF</option>
+                            <option value="aaron">AAR Healthcare</option>
+                            <option value="jubilee">Jubilee Insurance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="membershipNumber">Membership Number</label>
+                        <input type="text" id="membershipNumber" name="membershipNumber">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Medical History Fieldset -->
+            <fieldset>
+                <legend>Medical History</legend>
+                
+                <!-- Chronic Conditions Checkboxes -->
+                <div class="form-group">
+                    <label>Do you have any chronic conditions? (Check all that apply)</label>
+                    
+                    <div>
+                        <input type="checkbox" id="diabetes" name="conditions" value="diabetes">
+                        <label for="diabetes">Diabetes</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="hypertension" name="conditions" value="hypertension">
+                        <label for="hypertension">High Blood Pressure</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="hiv" name="conditions" value="hiv">
+                        <label for="hiv">HIV</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="asthma" name="conditions" value="asthma">
+                        <label for="asthma">Asthma</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="none" name="conditions" value="none">
+                        <label for="none">None of the above</label>
+                    </div>
+                </div>
+                
+                <!-- Allergies Textarea -->
+                <div class="form-group">
+                    <label for="allergies">Known Allergies</label>
+                    <textarea id="allergies" name="allergies" rows="3" placeholder="List any drug or food allergies"></textarea>
+                </div>
+                
+                <!-- Current Medications -->
+                <div class="form-group">
+                    <label for="currentMeds">Current Medications</label>
+                    <textarea id="currentMeds" name="currentMeds" rows="4" placeholder="Include dosage and frequency"></textarea>
+                </div>
+            </fieldset>
+            
+            <!-- Appointment Details Fieldset -->
+            <fieldset>
+                <legend>Appointment Details</legend>
+                
+                <!-- Date and Time Selection -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate" class="required">Preferred Date</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required min="2023-11-16">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentTime" class="required">Preferred Time</label>
+                        <input type="time" id="appointmentTime" name="appointmentTime" required min="08:00" max="16:30" step="1800">
+                        <small>Clinic hours: 8:00 AM - 4:30 PM</small>
+                    </div>
+                </div>
+                
+                <!-- Department Selection -->
+                <div class="form-group">
+                    <label for="department" class="required">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="" selected disabled>Select department</option>
+                        <option value="general">General Outpatient</option>
+                        <option value="maternal">Maternal Health</option>
+                        <option value="child">Child Health</option>
+                        <option value="chronic">Chronic Disease Clinic</option>
+                        <option value="lab">Laboratory Services</option>
+                    </select>
+                </div>
+                
+                <!-- Symptoms Description -->
+                <div class="form-group">
+                    <label for="symptoms" class="required">Brief Description of Symptoms/Reason for Visit</label>
+                    <textarea id="symptoms" name="symptoms" rows="4" required placeholder="Describe your symptoms or reason for visit"></textarea>
+                </div>
+            </fieldset>
+            
+            <!-- Consent Fieldset -->
+            <fieldset>
+                <legend>Consent and Declaration</legend>
+                
+                <!-- Consent Checkboxes -->
+                <div class="form-group">
+                    <div>
+                        <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                        <label for="privacyConsent" class="required">I consent to the collection and use of my personal health information in accordance with the clinic's privacy policy</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="truthDeclaration" name="truthDeclaration" required>
+                        <label for="truthDeclaration" class="required">I declare that the information provided is true and accurate to the best of my knowledge</label>
+                    </div>
+                </div>
+                
+                <!-- Signature and Date -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signature" class="required">Patient Signature</label>
+                        <input type="text" id="signature" name="signature" required placeholder="Type your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="todayDate">Today's Date</label>
+                        <input type="date" id="todayDate" name="todayDate" readonly value="2023-11-15">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Form Submission Buttons -->
+            <div class="form-group">
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Clear Form</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Dawa Moto Medical Centre. All rights reserved.</p>
+        <p>Location: Jua Kali Street, Bondeni District | Contact: info@dawamoto.co.ke | Phone: 020 765 4321</p>
+    </footer>
+</body>
+</html>
